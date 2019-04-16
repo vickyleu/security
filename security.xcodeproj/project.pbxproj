@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9804E307226515C30095EBE7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804E306226515C30095EBE7 /* libc++.tbd */; };
+		98750F212265953300DB2A84 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804E306226515C30095EBE7 /* libc++.tbd */; };
 		98E9346722633A4D00318875 /* security.h in Headers */ = {isa = PBXBuildFile; fileRef = 98E9346622633A4D00318875 /* security.h */; };
 		98E9347422633A6600318875 /* security.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98E9346922633A6600318875 /* security.cpp */; };
 		98E9347522633A6600318875 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98E9346A22633A6600318875 /* md5.cpp */; };
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9804E307226515C30095EBE7 /* libc++.tbd in Frameworks */,
+				98750F212265953300DB2A84 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,13 +302,7 @@
 		FDBEA7121A7B6D8D006B6517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					arm64,
-					arm64e,
-					armv7,
-					armv7s,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LIBRARY = "libc++";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
@@ -316,28 +310,20 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
 		FDBEA7131A7B6D8D006B6517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					arm64,
-					arm64e,
-					armv7,
-					armv7s,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LIBRARY = "libc++";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
